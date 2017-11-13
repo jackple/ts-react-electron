@@ -15,7 +15,7 @@ typescript + react + electron 简单起手模板
 ### run
 1. npm i
 2. npm run dev
-3. npm launch
+3. npm run launch
 
 ### other
 - 基础web项目请查看[ts-react](https://github.com/jackple/ts-react)
