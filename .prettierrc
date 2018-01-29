@@ -1,9 +1,17 @@
 {
     "overrides": [
         {
-            "files": "src/**/*.(css|scss|less)",
+            "files": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js"],
             "options": {
-                "singleQuote": false
+                "singleQuote": true,
+                "semi": false
+            }
+        },
+        {
+            "files": ["src/**/*.css", "src/**/*.scss"],
+            "options": {
+                "singleQuote": false,
+                "semi": true
             }
         }
     ]
