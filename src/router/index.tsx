@@ -7,29 +7,34 @@ import Login from './../views/Login'
 
 // 权限控制
 const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={props => (
-    false ? (
-      <Component {...props} />
-    ) : (
-        <Redirect to={{
-          pathname: '/login',
-          state: { from: props.location }
-        }} />
-      )
-  )} />
+    <Route
+        {...rest}
+        render={props =>
+            false ? (
+                <Component {...props} />
+            ) : (
+                <Redirect
+                    to={{
+                        pathname: '/login',
+                        state: { from: props.location }
+                    }}
+                />
+            )
+        }
+    />
 )
 
 const App = () => (
-  <Router>
-    <div>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <PrivateRoute exact path="/home" component={Home} />
-        <Route exact path="/login" component={Login} />
-        <Route component={Error} />
-      </Switch>
-    </div>
-  </Router>
+    <Router>
+        <div>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <PrivateRoute exact path="/home" component={Home} />
+                <Route exact path="/login" component={Login} />
+                <Route component={Error} />
+            </Switch>
+        </div>
+    </Router>
 )
 
 export default App

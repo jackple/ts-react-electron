@@ -2,8 +2,8 @@ import helloStore from './helloStore'
 import worldStore from './worldStore'
 
 const store = {
-  helloStore,
-  worldStore
+    helloStore,
+    worldStore
 }
 
 export default store

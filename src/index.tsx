@@ -13,24 +13,26 @@ import { RequireImport } from './types/interface'
 
 useStrict(true)
 
-const render = (Component) => {
-  ReactDOM.render(
-    <Provider {...store}>
-      <Component />
-    </Provider>,
-    document.getElementById('app') as HTMLElement
-  )
+const render = Component => {
+    ReactDOM.render(
+        <Provider {...store}>
+            <AppContainer warnings={false}>
+                <Component />
+            </AppContainer>
+        </Provider>,
+        document.getElementById('app') as HTMLElement
+    )
 }
 
 render(App)
 
 // Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept(['router'], () => {
-    const NextApp = require<RequireImport>('router').default
-    render(NextApp)
-  })
-  module.hot.accept(['store'], () => {
-    window.location.reload()
-  })
+    module.hot.accept(['router'], () => {
+        const NextApp = require<RequireImport>('router').default
+        render(NextApp)
+    })
+    module.hot.accept(['store'], () => {
+        window.location.reload()
+    })
 }

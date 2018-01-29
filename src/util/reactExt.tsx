@@ -11,19 +11,19 @@ interface Props {}
 interface States {}
 
 export class ComponentExt<P, S> extends React.Component<P, S> {
-  readonly api = api
-  readonly $message = message
-  readonly $notification = notification
+    readonly api = api
+    readonly $message = message
+    readonly $notification = notification
 }
 
 export class PureComponentExt<P, S> extends React.PureComponent<P, S> {
-  readonly api = api
-  readonly $message = message
-  readonly $notification = notification
+    readonly api = api
+    readonly $message = message
+    readonly $notification = notification
 }
 
 export class StoreExt {
-  readonly api = api
-  readonly $message = message
-  readonly $notification = notification
+    readonly api = api
+    readonly $message = message
+    readonly $notification = notification
 }
