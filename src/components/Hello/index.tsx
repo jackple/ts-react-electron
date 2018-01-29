@@ -33,7 +33,7 @@ export default class Hello extends ComponentExt<Props, {}> {
                     className={classNames(styles.base, styles.test)}
                     onClick={this.changeHelleState}
                 >
-                    Hello.....{this.helleState}
+                    Hello...{this.helleState}
                 </h1>
                 <div>
                     <h1 className={scssStyles.scss}>
