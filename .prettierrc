@@ -1,0 +1,10 @@
+{
+    "overrides": [
+        {
+            "files": "src/**/*.(css|scss|less)",
+            "options": {
+                "singleQuote": false
+            }
+        }
+    ]
+}
