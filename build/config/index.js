@@ -1,15 +1,15 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require("path");
-var APP_ENV = process.env.APP_ENV || "dev";
-var STATICDOMAIN = APP_ENV === "prod" ? "." : ""; // 静态资源访问域名（CDN）
+var NODE_ENV = process.env.NODE_ENV || "development";
+var STATICDOMAIN = NODE_ENV === "production" ? "." : ""; // 静态资源访问域名（CDN）
 
 module.exports = {
     build: {
         env: require("./prod.env"),
         index: path.resolve(__dirname, "../../index.html"),
-        assetsRoot: path.resolve(__dirname, `../../dist/${APP_ENV}`),
+        assetsRoot: path.resolve(__dirname, `../../dist/${NODE_ENV}`),
         assetsSubDirectory: "static",
-        assetsPublicPath: `${STATICDOMAIN}/dist/${APP_ENV}/`,
+        assetsPublicPath: `${STATICDOMAIN}/dist/${NODE_ENV}/`,
         productionSourceMap: false,
         // Gzip off by default as many popular static hosts such as
         // Surge or Netlify already gzip all static assets for you.

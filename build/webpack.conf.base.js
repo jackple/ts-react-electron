@@ -8,8 +8,6 @@ function resolve(dir) {
     return path.join(__dirname, "..", dir);
 }
 
-const env = process.env.APP_ENV || "prod";
-
 module.exports = {
     entry: {
         app: ["./src/index.tsx"]

@@ -11,8 +11,7 @@ declare var require: {
 declare var process: {
     env: {
         NODE_ENV: string
-        APP_ENV: string
-        ENV_CONFIG: any
+        BASE_URL: EnvConfig
     }
 }
 

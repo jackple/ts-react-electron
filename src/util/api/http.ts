@@ -11,7 +11,7 @@ enum HTTPERROR {
 }
 
 const DEFAULTCONFIG = {
-    baseURL: process.env.ENV_CONFIG.baseURL
+    baseURL: process.env.BASE_URL
 }
 
 // 测试, 全部通过, 请自行修改

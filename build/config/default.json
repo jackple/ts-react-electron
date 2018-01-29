@@ -1,8 +1,8 @@
 {
-  "dev": {
+  "development": {
     "baseURL": "http://rap2api.taobao.org/"
   },
-  "prod": {
+  "production": {
     "baseURL": ""
   }
 }
