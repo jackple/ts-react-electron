@@ -6,8 +6,7 @@
   "scripts": {
     "add": "node ./tool/cli.js add",
     "dev": "node build/dev-server.js",
-    "prod": "npm run build",
-    "build": "node build/build.js",
+    "prod": "node build/build.js",
     "launch": "electron .",
     "launchp": "cross-env NODE_ENV=production electron .",
     "launchbp": "npm run prod && cross-env NODE_ENV=production electron .",
